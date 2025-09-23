@@ -1017,7 +1017,7 @@
                     <span class="tech-tag">MySQL</span>
                     <span class="tech-tag">Thymeleaf</span>
                 </div>
-                <a href="https://github.com/thissisby/smart-contact-manager" class="project-link">
+                <a href="https://github.com/thissisby/smartcontactmanager_backend" class="project-link">
                     <i class="fab fa-github"></i> View on GitHub
                 </a>
             </div>
@@ -1042,7 +1042,7 @@
                     <span class="tech-tag">React.js</span>
                     <span class="tech-tag">Apache Camel</span>
                 </div>
-                <a href="https://github.com/thissisby/attendance-manager" class="project-link">
+                <a href="https://github.com/thissisby/attendancemanager_backend" class="project-link">
                     <i class="fab fa-github"></i> View on GitHub
                 </a>
             </div>
@@ -1067,7 +1067,7 @@
                     <span class="tech-tag">Hibernate</span>
                     <span class="tech-tag">MySQL</span>
                 </div>
-                <a href="https://github.com/thissisby/employee-payroll-system" class="project-link">
+                <a href="https://github.com/thissisby/employeepayrollsystem_backend" class="project-link">
                     <i class="fab fa-github"></i> View on GitHub
                 </a>
             </div>
@@ -1139,32 +1139,23 @@
                 </div>
             </div>
 
-            <form class="contact-form slide-in-right" id="contactForm">
-                <div class="form-group">
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
-                </div>
+            <!-- modify this form HTML and place wherever you want your form -->
+<form
+  action="https://formspree.io/f/mblzjozy"
+  method="POST"
+>
+  <label>
+    Your email:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">Send</button>
+</form>
                 
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="subject">Subject</label>
-                    <input type="text" id="subject" name="subject" placeholder="What's this about?" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" placeholder="Tell me about your project or just say hello!" required></textarea>
-                </div>
-                
-                <button type="submit" class="submit-btn">
-                    <i class="fas fa-paper-plane"></i>
-                    Send Message
-                </button>
-            </form>
         </div>
     </section>
 <!-- //footer -->
@@ -1441,4 +1432,5 @@
         });
     </script>
 </body>
+
 </html>
