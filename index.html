@@ -188,6 +188,135 @@
             text-transform: uppercase;
             letter-spacing: 0.1em;
         }
+/* General form container styling */
+form {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 35px 30px;
+  background: linear-gradient(135deg, #f0f4ff, #dfe9ff);
+  border-radius: 15px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Floating labels */
+form label {
+  position: relative;
+  display: block;
+  margin-bottom: 25px;
+  color: #333;
+  font-weight: 500;
+}
+
+form input[type="email"],
+form textarea {
+  width: 100%;
+  padding: 14px 15px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background: #fff;
+  transition: all 0.4s ease;
+  outline: none;
+}
+
+/* Label animation */
+form label::after {
+  content: attr(data-placeholder);
+  position: absolute;
+  top: 14px;
+  left: 15px;
+  color: #aaa;
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.3s ease all;
+}
+
+/* Move label when input focused or has text */
+form input:focus + ::after,
+form textarea:focus + ::after,
+form input:not(:placeholder-shown) + ::after,
+form textarea:not(:placeholder-shown) + ::after {
+  top: -10px;
+  left: 12px;
+  font-size: 12px;
+  color: #6c63ff;
+  background: #f0f4ff;
+  padding: 0 5px;
+}
+
+/* Focus effect with animated border */
+form input:focus,
+form textarea:focus {
+  border-color: #6c63ff;
+  box-shadow: 0 0 12px rgba(108, 99, 255, 0.4);
+  transform: scale(1.02);
+}
+
+/* Textarea specific */
+form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Button styling with gradient and glow */
+form button {
+  display: inline-block;
+  padding: 14px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(45deg, #6c63ff, #9a8fff);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 6px 15px rgba(108, 99, 255, 0.4);
+}
+
+/* Button hover animation */
+form button:hover {
+  background: linear-gradient(45deg, #574fd6, #6c63ff);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(108, 99, 255, 0.6);
+}
+
+/* Optional subtle background animation */
+form::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(60deg, #dfe9ff, #f0f4ff, #dfe9ff, #f0f4ff);
+  animation: rotate 20s linear infinite;
+  z-index: 0;
+  opacity: 0.2;
+  border-radius: 50%;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg) translateX(0); }
+  50% { transform: rotate(180deg) translateX(20px); }
+  100% { transform: rotate(360deg) translateX(0); }
+}
+
+/* Ensure content above background animation */
+form * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  form {
+    padding: 25px 20px;
+    margin: 20px;
+  }
+}
 
         .hero-title {
             font-family: 'SF Pro Display', sans-serif;
@@ -1434,6 +1563,7 @@
 </body>
 
 </html>
+
 
 
 
